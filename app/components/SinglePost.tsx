@@ -9,7 +9,6 @@ interface LoaderData {
   post: Post;
 }
 
-// Loader function
 export async function loader({ params }: LoaderFunctionArgs) {
   const { id } = params;
   
@@ -24,8 +23,6 @@ export async function loader({ params }: LoaderFunctionArgs) {
     throw new Response("Post not found", { status: 404 });
   }
 }
-
-// Action function
 export async function action({ request, params }: ActionFunctionArgs) {
   const { id } = params;
   const formData = await request.formData();
