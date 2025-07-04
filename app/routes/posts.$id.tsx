@@ -4,7 +4,6 @@ import type { LoaderFunctionArgs } from "react-router";
 import { postsService } from "../services/endpoints/posts";
 import type { Route } from './+types/posts.$id';
 
-// Loader function
 export async function clientLoader({request, params}: LoaderFunctionArgs)  {
   const { id } = params;
   
